@@ -41,3 +41,17 @@ img{height:auto} .food-card img,.gallery-grid img,.photo-stack img{height:auto;a
 /* Final small-screen refinements for embedded edition */
 @media(max-width:600px){.video-wall{overflow:hidden}.video-wall video{object-fit:cover}.section{padding-block:54px}.navorder{display:none!important}header .nav{min-height:70px}.food-card{overflow:hidden}.footergrid{gap:22px} .gallery-grid img{cursor:zoom-in} .cartbar,.floatwa{z-index:75} .cartpanel{max-height:90dvh;overflow:auto}}
 @media(max-width:350px){.hero h1{font-size:2.45rem}.socials{flex-wrap:wrap}.brand span{max-width:95px}}
+
+/* Consistent film-backed inner-page headers */
+.subhero.video-subhero{position:relative;isolation:isolate;overflow:hidden;background:#21120b;color:#fff;min-height:430px;display:flex;align-items:center}
+.video-subhero .video-wall{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.video-subhero .video-wall video{width:100%;height:100%;object-fit:cover}
+.video-subhero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(24,9,3,.94),rgba(35,10,6,.78) 52%,rgba(20,10,7,.44))}
+.video-subhero .container{position:relative;z-index:1;padding-top:85px;padding-bottom:85px;width:100%}
+.video-subhero h1,.video-subhero p{color:white;position:relative}.video-subhero .pill{color:#ffcd84}
+.video-subhero p{max-width:620px;color:#f4e1d2}
+@media (max-width:700px){.video-subhero{min-height:390px}.video-subhero .video-wall{grid-template-columns:1fr}.video-subhero .video-wall video:nth-child(2){display:none}.video-subhero .container{padding-top:68px;padding-bottom:68px}.video-subhero h1{font-size:clamp(3.1rem,11vw,4.4rem)}.hero .video-wall{grid-template-columns:1fr}.hero .video-wall video:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* Remove old decorative star from every inner hero */
+.subhero::after{content:""!important;font-size:0!important;right:0!important;top:0!important;pointer-events:none}
