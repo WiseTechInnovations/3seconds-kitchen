@@ -37,3 +37,7 @@ img{height:auto} .food-card img,.gallery-grid img,.photo-stack img{height:auto;a
 }
 @media(max-width:360px){.grid{grid-template-columns:1fr}.food-content h3{min-height:auto}.food-content .row{flex-direction:row;align-items:center}.tiny-button{width:auto}.hero-actions{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.ticker-track{will-change:auto}}
+
+/* Final small-screen refinements for embedded edition */
+@media(max-width:600px){.video-wall{overflow:hidden}.video-wall video{object-fit:cover}.section{padding-block:54px}.navorder{display:none!important}header .nav{min-height:70px}.food-card{overflow:hidden}.footergrid{gap:22px} .gallery-grid img{cursor:zoom-in} .cartbar,.floatwa{z-index:75} .cartpanel{max-height:90dvh;overflow:auto}}
+@media(max-width:350px){.hero h1{font-size:2.45rem}.socials{flex-wrap:wrap}.brand span{max-width:95px}}
